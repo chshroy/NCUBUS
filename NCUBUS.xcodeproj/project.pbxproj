@@ -10,10 +10,16 @@
 		B24C756923EEB24B00B97E39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C756823EEB24B00B97E39 /* AppDelegate.swift */; };
 		B24C756B23EEB24B00B97E39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C756A23EEB24B00B97E39 /* SceneDelegate.swift */; };
 		B24C756E23EEB24B00B97E39 /* NCUBUS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B24C756C23EEB24B00B97E39 /* NCUBUS.xcdatamodeld */; };
-		B24C757023EEB24B00B97E39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C756F23EEB24B00B97E39 /* ContentView.swift */; };
+		B24C757023EEB24B00B97E39 /* BusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C756F23EEB24B00B97E39 /* BusView.swift */; };
 		B24C757223EEB25B00B97E39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24C757123EEB25B00B97E39 /* Assets.xcassets */; };
 		B24C757523EEB25B00B97E39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24C757423EEB25B00B97E39 /* Preview Assets.xcassets */; };
 		B24C757823EEB25B00B97E39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24C757623EEB25B00B97E39 /* LaunchScreen.storyboard */; };
+		B24C758423EEC1DB00B97E39 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C758323EEC1DB00B97E39 /* Responses.swift */; };
+		B24C758823EEC79100B97E39 /* FavoriteRoutesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C758723EEC79100B97E39 /* FavoriteRoutesRow.swift */; };
+		B24C758A23EFD42D00B97E39 /* AllRoutesRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C758923EFD42D00B97E39 /* AllRoutesRow.swift */; };
+		B24C758C23EFF58200B97E39 /* AllRoutesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C758B23EFF58200B97E39 /* AllRoutesSection.swift */; };
+		B24C758E23F0115400B97E39 /* RoutesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C758D23F0115400B97E39 /* RoutesFetcher.swift */; };
+		B24C759223F014D500B97E39 /* RouteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C759123F014D500B97E39 /* RouteError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +27,17 @@
 		B24C756823EEB24B00B97E39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B24C756A23EEB24B00B97E39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B24C756D23EEB24B00B97E39 /* NCUBUS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NCUBUS.xcdatamodel; sourceTree = "<group>"; };
-		B24C756F23EEB24B00B97E39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B24C756F23EEB24B00B97E39 /* BusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusView.swift; sourceTree = "<group>"; };
 		B24C757123EEB25B00B97E39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B24C757423EEB25B00B97E39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B24C757723EEB25B00B97E39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B24C757923EEB25B00B97E39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24C758323EEC1DB00B97E39 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		B24C758723EEC79100B97E39 /* FavoriteRoutesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRoutesRow.swift; sourceTree = "<group>"; };
+		B24C758923EFD42D00B97E39 /* AllRoutesRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoutesRow.swift; sourceTree = "<group>"; };
+		B24C758B23EFF58200B97E39 /* AllRoutesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoutesSection.swift; sourceTree = "<group>"; };
+		B24C758D23F0115400B97E39 /* RoutesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutesFetcher.swift; sourceTree = "<group>"; };
+		B24C759123F014D500B97E39 /* RouteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +70,11 @@
 		B24C756723EEB24B00B97E39 /* NCUBUS */ = {
 			isa = PBXGroup;
 			children = (
-				B24C756823EEB24B00B97E39 /* AppDelegate.swift */,
-				B24C756A23EEB24B00B97E39 /* SceneDelegate.swift */,
-				B24C756F23EEB24B00B97E39 /* ContentView.swift */,
-				B24C757123EEB25B00B97E39 /* Assets.xcassets */,
-				B24C757623EEB25B00B97E39 /* LaunchScreen.storyboard */,
-				B24C757923EEB25B00B97E39 /* Info.plist */,
 				B24C756C23EEB24B00B97E39 /* NCUBUS.xcdatamodeld */,
+				B24C758023EEB32F00B97E39 /* Utilities */,
+				B24C757F23EEB2B200B97E39 /* Supporting Files */,
+				B24C758123EEB34100B97E39 /* UI */,
+				B24C758223EEC12800B97E39 /* RouteAPI */,
 				B24C757323EEB25B00B97E39 /* Preview Content */,
 			);
 			path = NCUBUS;
@@ -76,6 +86,62 @@
 				B24C757423EEB25B00B97E39 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B24C757F23EEB2B200B97E39 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B24C756823EEB24B00B97E39 /* AppDelegate.swift */,
+				B24C756A23EEB24B00B97E39 /* SceneDelegate.swift */,
+				B24C757123EEB25B00B97E39 /* Assets.xcassets */,
+				B24C757623EEB25B00B97E39 /* LaunchScreen.storyboard */,
+				B24C757923EEB25B00B97E39 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B24C758023EEB32F00B97E39 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B24C758123EEB34100B97E39 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B24C758623EEC77300B97E39 /* Components */,
+				B24C758523EEC76A00B97E39 /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B24C758223EEC12800B97E39 /* RouteAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B24C758323EEC1DB00B97E39 /* Responses.swift */,
+				B24C758D23F0115400B97E39 /* RoutesFetcher.swift */,
+				B24C759123F014D500B97E39 /* RouteError.swift */,
+			);
+			path = RouteAPI;
+			sourceTree = "<group>";
+		};
+		B24C758523EEC76A00B97E39 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B24C756F23EEB24B00B97E39 /* BusView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B24C758623EEC77300B97E39 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B24C758B23EFF58200B97E39 /* AllRoutesSection.swift */,
+				B24C758923EFD42D00B97E39 /* AllRoutesRow.swift */,
+				B24C758723EEC79100B97E39 /* FavoriteRoutesRow.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,10 +215,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B24C759223F014D500B97E39 /* RouteError.swift in Sources */,
+				B24C758823EEC79100B97E39 /* FavoriteRoutesRow.swift in Sources */,
+				B24C758C23EFF58200B97E39 /* AllRoutesSection.swift in Sources */,
+				B24C758423EEC1DB00B97E39 /* Responses.swift in Sources */,
+				B24C758A23EFD42D00B97E39 /* AllRoutesRow.swift in Sources */,
 				B24C756923EEB24B00B97E39 /* AppDelegate.swift in Sources */,
 				B24C756E23EEB24B00B97E39 /* NCUBUS.xcdatamodeld in Sources */,
-				B24C757023EEB24B00B97E39 /* ContentView.swift in Sources */,
+				B24C757023EEB24B00B97E39 /* BusView.swift in Sources */,
 				B24C756B23EEB24B00B97E39 /* SceneDelegate.swift in Sources */,
+				B24C758E23F0115400B97E39 /* RoutesFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +364,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NCUBUS/Preview Content\"";
 				DEVELOPMENT_TEAM = 2T69U2686G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NCUBUS/Info.plist;
+				INFOPLIST_FILE = "NCUBUS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +384,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"NCUBUS/Preview Content\"";
 				DEVELOPMENT_TEAM = 2T69U2686G;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NCUBUS/Info.plist;
+				INFOPLIST_FILE = "NCUBUS/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
