@@ -7,52 +7,65 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AllRoutesSection: View {
     @ObservedObject private var viewModel: ViewModel
 
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
-        self.viewModel.refresh()
-        print("pepepe")
     }
+    
     var body: some View {
         ScrollView {
             ForEach(self.viewModel.dataSource) { data in
-                NavigationLink(destination: Text("haha")) {
-                    AllRoutesRow(viewModel: data)
-                    .listRowInsets(EdgeInsets())
-                }.buttonStyle(PlainButtonStyle())
-                
+                AllRoutesRow(viewModel: data)
+                .listRowInsets(EdgeInsets())
             }
         }
+//    .onAppear(perform: viewModel.refresh)
     }
 }
 
 extension AllRoutesSection {
     class ViewModel: ObservableObject {
-        @Published var dataSource: [AllRoutesRow.ViewModel] = []
-        private let routesFetcher: RoutesFetcher
+        @Published var dataSource: [AllRoutesRow.ViewModel] = [AllRoutesRow.ViewModel.init(route: Route.example)]
         
-        init(
-            routesFetcher: RoutesFetcher
-        ) {
+        private let routesFetcher: RoutesFetchable
+        private var disposables = Set<AnyCancellable>()
+        
+        init(routesFetcher: RoutesFetchable) {
             self.routesFetcher = routesFetcher
+            self.refresh()
         }
         
         func refresh() {
             routesFetcher.allRoutes()
                 .map { response in
-                    response.routes.map() { route in
-                        AllRoutesRow.ViewModel.init(route: route)
+                    response.routes
+                    .filter { route in
+                        route.direction == 0
+                    }
+                    .map() { route in
+                        AllRoutesRow.ViewModel(route: route)
                     }
                 }
-            .sink(receiveCompletion: {_ in
-            },receiveValue: { [weak self] forecast in
+                 .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { [weak self] value in
+                  guard let self = self else { return }
+                  switch value {
+                  case .failure:
+                    self.dataSource = []
+                  case .finished:
+                    break
+                  }
+                },receiveValue: { [weak self] data in
                 guard let self = self else { return }
-                self.dataSource = forecast
+                    self.dataSource = data
             })
+            .store(in: &disposables)
         }
+        
     }
 }
 

@@ -48,20 +48,6 @@ enum BusViewBuilder {
     }
 }
 
-struct FavoriteRoutesSection: View {
-    var viewModel: ViewModel
-    var body: some View {
-        Text("hello")
-    }
-}
-
-extension FavoriteRoutesSection {
-    class ViewModel: ObservableObject {
-        
-    }
-}
-
-
 
 struct BusView_Previews: PreviewProvider {
     static var previews: some View {
